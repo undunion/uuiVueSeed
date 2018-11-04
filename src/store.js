@@ -1,16 +1,21 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue  from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
+    state: {
+        showLoading: false,
+        text: '',
+    },
+    mutations: {
+        UPDATE_LOADING (state, status) {
+            state.showLoading = status;
+        },
 
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
-})
+        UPDATE_LOADING_TEXT (state, status) {
+            state.text = status || '数据加载中';
+        }
+    },
+    actions: {}
+});

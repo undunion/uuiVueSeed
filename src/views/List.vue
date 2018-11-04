@@ -1,6 +1,6 @@
 <template>
   <div>
-    Home Page
+    List Page
   </div>
 </template>
 <script>
